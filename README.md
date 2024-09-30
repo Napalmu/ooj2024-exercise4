@@ -2,26 +2,31 @@
 
 ## Tehtävänanto
 
-Tehtävänanto löytyy Villestä. Osa tehtävistä tehdään Villessa ja osa palautetaan Gitlabin kautta. Linkki omaan repositorioon ilmoitetaan Villessä. 
+#### Tämä harjoituspohja liittyy Villen viikkoon 5.
 
-Forkkaa itsellesi tämä projekti pohjaksi. Huomaa, että kaikki harjoituskerran 4 tehtävät tehdään samaan projektiin eli pohja forkataan vain kerran.
+Tehtävät löytyvät Villestä. Kaikkiin viikon 5 tehtäviin vastaaan suoraan Ville. 
 
-Main.java luokka sisältää ohjelman käynnistävän main-rutiinin. Muihin luokkiin ei tule main-rutiinia lisätä. Harjoitustyöpohja on rakennettu niin, 
-että Main-luokan ajamalla kaikki harjoitustehtävät suoritetaan. 
+Tehtävänpohja sisältää tällä kerralla ohjelman, pelin, jota analysoidaan. Forkkaa kuiten itsellesi tämä projekti pohjaksi, 
+jotta voit halutessasi tallettaa tekemäsi kokeilut myös omaan Gitlabbiisi. Gitlab-osoitetta ei kuitenkaan tällä kerralla 
+kysytä.
 
-Huomaa, että testit täytyy kuitenkin ajaa erikseen. 
-
-## Tehtäviin vastaaminen
-
-- Tehtävä 6: Tutustu tästä harjoituspohjasta löytyvää peliin. Vastaa Villestä löytyviin esseekysymyksiin.
+Main.java luokka sisältää ohjelman käynnistävän main-rutiinin. 
 
 Pelissä käyttäjä valitsee haluamansa vaihtoehdon esitetyistä kysymyksistä ja peli vastaa jotain
 satunnaista. Idea on siis sama kuin Cards agains humanity -pelissä.
 
 Ohjelman käynnistyessä valitaan ensin, mistä kysymykset ladataan. Jotta tietokanta vaihtoehto toimii oikein,
-on peli käynnistettävä Mavenin avulla. CSV-vaihtoehdon pitäisi toimia aina.
+on peli käynnistettävä Mavenin avulla (joko komentorivillä mvn exec:java tai IDEssa Maven-tyyppinen ajokonfiguraatio). 
+CSV-vaihtoehdon pitäisi toimia aina.
 
-Maven-projektissa testit sijoitetaan test-hakemiston alle. 
+
+## Tehtäviin vastaaminen
+
+- Tehtävä 6: Tutustu tästä harjoituspohjasta löytyvää peliin. Vastaa Villestä löytyviin esseekysymyksiin.
+
+
+
+
 
 ## Työnkulku
 
