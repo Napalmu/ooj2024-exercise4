@@ -23,13 +23,13 @@ public class Main {
 
         switch (guiTypeArgument){
             case "gui":
-                UiInterface.getUIInstance(UITypes.GUI);
+                ui = UiInterface.getUIInstance(UITypes.GUI);
                 break;
             case "terminal":
-                UiInterface.getUIInstance(UITypes.TERMINAL);
+                ui = UiInterface.getUIInstance(UITypes.TERMINAL);
                 break;
             default:
-                UiInterface.getUIInstance(UITypes.TERMINAL);
+                ui = UiInterface.getUIInstance(UITypes.TERMINAL);
                 break;
         }
         return ui;
