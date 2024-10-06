@@ -1,5 +1,8 @@
 package fi.utu.tech.ooj.exercise4.storage;
 
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,8 +15,12 @@ public class SQLiteDataSource implements DataSource {
 
     public SQLiteDataSource() {
 
-        String databaseFile =SQLiteDataSource.class.getResource("/questionsAndAnswers.db").getPath();
-        this.databaseUrl = "jdbc:sqlite:" + databaseFile;
+        URL resource = CSVDataSource.class.getResource("/questionsAndAnswers.db");
+        try {
+            this.databaseUrl = "jdbc:sqlite:" + Paths.get(resource.toURI()).toString();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

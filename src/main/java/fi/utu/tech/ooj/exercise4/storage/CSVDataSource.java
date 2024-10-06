@@ -3,6 +3,9 @@ package fi.utu.tech.ooj.exercise4.storage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +13,12 @@ public class CSVDataSource implements DataSource {
     private final String filePath;
 
     public CSVDataSource() {
-        this.filePath = CSVDataSource.class.getResource("/questionsAndAnswers.csv").getPath();
+        URL resource = CSVDataSource.class.getResource("/questionsAndAnswers.csv");
+        try {
+            this.filePath = Paths.get(resource.toURI()).toString();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
